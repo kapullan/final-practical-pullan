@@ -1,3 +1,5 @@
+import { menuItems } from '../constants.js';
+
 const defaultSettings = 
     {
         "theme": "dark",
@@ -121,13 +123,6 @@ function validateMessage()
 
     function renderNavigation()
     {
-        const menuItems = [
-            { name: "Home", href: "index.html" },
-            { name: "About", href: "about.html" },
-            { name: "Contact", href: "contact.html" },
-            { name: "Skills", href: "skills.html" },
-            { name: "Form", href: "form.html" }
-        ];
         document.querySelector(".nav-menu").innerHTML = menuItems.map(item => `<li><a href="${item.href}">${item.name}</a></li>`).join("");
     }
 
